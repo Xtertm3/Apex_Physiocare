@@ -5,25 +5,27 @@
 }
 
 :root {
-  --primary-color: #38bdf8;       /* Vibrant cyan/blue */
-  --secondary-color: #0d9488;     /* Health teal */
-  --accent-color: #10b981;        /* Safe emerald green */
-  --text-dark: #f8fafc;           /* Almost white for high-contrast dark mode text */
-  --text-light: #94a3b8;          /* Muted description gray */
-  --background: #0f172a;          /* Deep dark Slate-900 background */
-  --white: #1e293b;               /* Slate-800 card background */
-  --white-pure: #ffffff;          /* Pure white for overlays and headers */
-  --border-color: #334155;        /* Thin slate borders */
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.5);
-  --bg-hover: #0284c7;
-  --footer-bg: #030712;           /* Deepest dark gray for footer */
+  --primary-color: #0284c7;       /* Clean medical blue */
+  --secondary-color: #0d9488;     /* Clinical teal */
+  --accent-color: #059669;        /* Healthy green */
+  --text-dark: #0f172a;           /* Dark slate body/headings */
+  --text-light: #475569;          /* Medium slate paragraph text */
+  --background: #f8fafc;          /* Soft off-white page background */
+  --white: #ffffff;               /* Pure white for cards/boxes */
+  --white-pure: #ffffff;
+  --border-color: #e2e8f0;        /* Delicate slate borders */
+  --shadow: 0 4px 20px rgba(148, 163, 184, 0.08); /* Minimal light shadow */
+  --shadow-lg: 0 12px 30px rgba(148, 163, 184, 0.15); /* Modern card shadow */
+  --bg-hover: #f1f5f9;
+  --footer-bg: #0f172a;           /* Keep premium slate for footer */
+  --footer-text: #94a3b8;
+  --footer-title: #ffffff;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: var(--text-dark);
+  color: var(--text-light);
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
 }
@@ -54,13 +56,13 @@ html {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: #0f172a; /* Dark text for contrast on bright cyan */
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #7dd3fc;
+  background-color: #0369a1;
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25);
 }
 
 .btn-secondary {
@@ -70,8 +72,8 @@ html {
 }
 
 .btn-secondary:hover {
-  background-color: #334155;
-  color: var(--white-pure);
+  background-color: #f1f5f9;
+  color: #0369a1;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
@@ -86,7 +88,7 @@ input, select, textarea {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid var(--border-color);
-  background-color: rgba(15, 23, 42, 0.6); /* Slate-900 semitransparent */
+  background-color: var(--white);
   color: var(--text-dark);
   border-radius: 8px;
   font-size: 16px;
@@ -97,8 +99,8 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
-  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+  background-color: var(--white);
 }
 
 textarea {

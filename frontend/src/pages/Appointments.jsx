@@ -1,20 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { CONFIG } from '../config';
 import '../styles/Appointments.css';
 
 function Appointments() {
+  const location = useLocation();
+  
   const [formData, setFormData] = useState({
     patientName: '',
     patientEmail: '',
     patientPhone: '',
-    service: '',
-    doctor: '',
+    service: location.state?.serviceName || '',
+    doctor: location.state?.doctorName || '',
     appointmentDate: '',
     timeSlot: '',
     condition: '',
     notes: ''
   });
+
+  useEffect(() => {
+    if (location.state?.serviceName) {
+      setFormData(prev => ({ ...prev, service: location.state.serviceName }));
+    }
+    if (location.state?.doctorName) {
+      setFormData(prev => ({ ...prev, doctor: location.state.doctorName }));
+    }
+  }, [location]);
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');

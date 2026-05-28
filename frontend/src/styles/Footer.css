@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--footer-bg);
-  color: var(--text-light);
+  color: var(--footer-text);
   margin-top: 80px;
   border-top: 1px solid var(--border-color);
 }
@@ -23,6 +23,7 @@
 .footer-section p {
   line-height: 1.8;
   font-size: 14px;
+  color: var(--footer-text);
 }
 
 .footer-section ul {
@@ -34,7 +35,7 @@
 }
 
 .footer-section ul li a {
-  color: var(--text-light);
+  color: var(--footer-text);
   text-decoration: none;
   transition: color 0.3s ease;
 }
