@@ -201,19 +201,6 @@ function Contact() {
                 <p><strong>Monday - Saturday:</strong> 7:00 AM - 9:00 PM</p>
                 <p><strong>Sunday:</strong> 9:00 AM - 2:00 PM</p>
               </div>
-
-              <div className="info-card">
-                <h3>🚘 Getting Here</h3>
-                <p>5 minutes from NIMHANS</p>
-                <p>Near central bus stop</p>
-                <p>Free parking available</p>
-              </div>
-
-              <div className="info-card">
-                <h3>💳 Insurance & Corporate</h3>
-                <p>Empanelled with major corporate insurers</p>
-                <p>Cashless & reimbursement claims accepted</p>
-              </div>
             </div>
 
             <div className="contact-form-wrapper">
