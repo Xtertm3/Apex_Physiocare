@@ -31,7 +31,7 @@ function Footer() {
         </div>
         <div className="footer-section">
           <h3>Contact Info</h3>
-          <p>📍 BTM Layout, Bengaluru - 560 068</p>
+          <p>📍 Bangalore, Karnataka, India</p>
           <p>📞 {CONFIG.phoneNumberFormatted}</p>
           <p>📧 {CONFIG.contactEmail}</p>
         </div>

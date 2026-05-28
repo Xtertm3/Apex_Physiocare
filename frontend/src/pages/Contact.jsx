@@ -159,8 +159,7 @@ function Contact() {
               <div className="info-card">
                 <h3>📍 Location</h3>
                 <p>Apex Healthcare Multi-Specialty Center</p>
-                <p>BTM Layout, Bengaluru - 560 068</p>
-                <p>Karnataka, India</p>
+                <p>Bangalore, Karnataka, India</p>
               </div>
 
               <div className="info-card">
@@ -206,7 +205,7 @@ function Contact() {
               <div className="info-card">
                 <h3>🚘 Getting Here</h3>
                 <p>5 minutes from NIMHANS</p>
-                <p>Near BTM bus stop</p>
+                <p>Near central bus stop</p>
                 <p>Free parking available</p>
               </div>
 
@@ -428,7 +427,7 @@ function Contact() {
           <h2>Find Us on the Map</h2>
           <div className="map-placeholder">
             <p>📍 Google Map Integration Coming Soon</p>
-            <p>BTM Layout, Bengaluru - 560 068</p>
+            <p>Bangalore, Karnataka, India</p>
           </div>
         </div>
       </section>

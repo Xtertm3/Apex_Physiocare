@@ -301,7 +301,7 @@ function Appointments() {
             <div className="clinic-info">
               <h3>📍 Clinic Location</h3>
               <p><strong>Apex Healthcare Multi-Specialty Center</strong></p>
-              <p>BTM Layout, Bengaluru - 560 068, Karnataka</p>
+              <p>Bangalore, Karnataka, India</p>
               <p>📞 {CONFIG.phoneNumberFormatted} | 📧 {CONFIG.contactEmail}</p>
               <p><strong>Clinic Hours:</strong></p>
               <p>Monday - Saturday: 7:00 AM - 9:00 PM</p>
