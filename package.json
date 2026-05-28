@@ -1,0 +1,24 @@
+{
+  "name": "apex-healthcare-platform",
+  "version": "1.0.0",
+  "description": "Full-stack healthcare services platform with appointment scheduling",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend"
+  },
+  "keywords": [
+    "healthcare",
+    "appointments",
+    "physiotherapy",
+    "rehabilitation",
+    "medical-services",
+    "react",
+    "node",
+    "mongodb"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

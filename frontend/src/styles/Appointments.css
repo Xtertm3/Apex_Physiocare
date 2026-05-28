@@ -1,0 +1,139 @@
+.appointments-page {
+  min-height: 100vh;
+}
+
+.appointments-header {
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.1) 0%, rgba(13, 148, 136, 0.02) 50%, var(--background) 100%);
+  color: var(--white-pure);
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.appointments-header h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.appointments-header p {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+.appointments-form-container {
+  padding: 60px 20px;
+  background-color: var(--background);
+}
+
+.form-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.appointment-form {
+  margin-bottom: 40px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row.full-width {
+  grid-template-columns: 1fr;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.appointment-form .btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+.appointment-form .btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.clinic-info {
+  background-color: var(--background);
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.clinic-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.clinic-info p {
+  color: var(--text-light);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.clinic-info strong {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .appointments-header h1 {
+    font-size: 28px;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form-row.full-width {
+    grid-template-columns: 1fr;
+  }
+}
