@@ -1,22 +1,46 @@
 .hero {
-  background: radial-gradient(circle at top, rgba(2, 132, 199, 0.08) 0%, rgba(13, 148, 136, 0.02) 50%, var(--background) 100%);
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(13, 148, 136, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #f0f9ff 0%, var(--background) 100%);
   color: var(--text-dark);
-  padding: 120px 20px;
+  padding: 130px 20px;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(#94a3b8 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 52px;
   margin-bottom: 20px;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--text-dark);
 }
 
 .hero-content p {
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   color: var(--text-light);
 }
 
