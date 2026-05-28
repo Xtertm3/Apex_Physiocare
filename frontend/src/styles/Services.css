@@ -235,12 +235,21 @@
 }
 
 @media (max-width: 768px) {
+  .services-header {
+    padding: 40px 15px;
+  }
+  
   .services-header h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .services-header p {
+    font-size: 14px;
   }
 
   .services-list {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 

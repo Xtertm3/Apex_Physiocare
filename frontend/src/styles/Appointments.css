@@ -120,8 +120,16 @@
 }
 
 @media (max-width: 768px) {
+  .appointments-header {
+    padding: 40px 15px;
+  }
+
   .appointments-header h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .appointments-header p {
+    font-size: 14px;
   }
 
   .form-wrapper {

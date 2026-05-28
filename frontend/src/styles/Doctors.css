@@ -127,12 +127,21 @@
 }
 
 @media (max-width: 768px) {
+  .doctors-header {
+    padding: 40px 15px;
+  }
+
   .doctors-header h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .doctors-header p {
+    font-size: 14px;
   }
 
   .doctors-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .doctor-avatar {
