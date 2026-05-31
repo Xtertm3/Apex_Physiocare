@@ -9,19 +9,9 @@ function Services() {
   const [selectedService, setSelectedService] = useState(null);
 
   useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const response = await axios.get('/api/services');
-        setServices(response.data);
-      } catch (error) {
-        console.log('Error fetching services:', error);
-        // Load mock data if API fails
-        setServices(mockServices);
-      }
-      setLoading(false);
-    };
-
-    fetchServices();
+    // Load local mock services directly to bypass Vercel API rewrite crashes
+    setServices(mockServices);
+    setLoading(false);
   }, []);
 
   const mockServices = [
