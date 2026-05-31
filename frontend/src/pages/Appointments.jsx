@@ -1,53 +1,21 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import axios from 'axios';
 import { CONFIG } from '../config';
 import '../styles/Appointments.css';
 
 function Appointments() {
-  const location = useLocation();
-  
   const [formData, setFormData] = useState({
     patientName: '',
-    patientEmail: '',
     patientPhone: '',
-    service: location.state?.serviceName || '',
-    doctor: location.state?.doctorName || '',
     appointmentDate: '',
     timeSlot: '',
     condition: '',
     notes: ''
   });
 
-  useEffect(() => {
-    if (location.state?.serviceName) {
-      setFormData(prev => ({ ...prev, service: location.state.serviceName }));
-    }
-    if (location.state?.doctorName) {
-      setFormData(prev => ({ ...prev, doctor: location.state.doctorName }));
-    }
-  }, [location]);
-
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
-  const services = [
-    'Advanced Dry Needling',
-    'Manual Therapy',
-    'Neuro Rehabilitation',
-    'Cupping Therapy',
-    'Sports Rehabilitation',
-    'Yoga & Wellness',
-    'Tele-consultation',
-    'Home Visit Appointment Booking'
-  ];
-
-  const doctors = [
-    'Dr. Akash Jana',
-    'Dr. Kirtika Chakraborty',
-    'Dr. Bhavesh Lulla'
-  ];
 
   const conditions = [
     'Back & Spine Pain',
@@ -57,7 +25,8 @@ function Appointments() {
     'Sports Injuries',
     "Parkinson's Disease",
     'Heel & Foot Pain',
-    'Post-Surgery Rehab'
+    'Post-Surgery Rehab',
+    'Others'
   ];
 
   const timeSlots = [
@@ -79,8 +48,7 @@ function Appointments() {
     e.preventDefault();
     
     // Validation
-    if (!formData.patientName || !formData.patientEmail || !formData.patientPhone ||
-        !formData.service || !formData.doctor || !formData.appointmentDate ||
+    if (!formData.patientName || !formData.patientPhone || !formData.appointmentDate ||
         !formData.timeSlot || !formData.condition) {
       setError('Please fill in all required fields');
       return;
@@ -91,10 +59,7 @@ function Appointments() {
       const mailBody = {
         _subject: `New Appointment Request from ${formData.patientName}`,
         "Patient Name": formData.patientName,
-        "Patient Email": formData.patientEmail,
         "Patient Phone": formData.patientPhone,
-        "Service Interested": formData.service,
-        "Doctor Requested": formData.doctor,
         "Preferred Date": formData.appointmentDate,
         "Time Slot": formData.timeSlot,
         "Condition/Concern": formData.condition,
@@ -112,10 +77,7 @@ function Appointments() {
       const whatsappMessage = `*New Appointment Request - Apex Healthcare*\n` +
         `---------------------------------------\n` +
         `*Patient Name:* ${formData.patientName}\n` +
-        `*Email:* ${formData.patientEmail}\n` +
         `*Phone:* ${formData.patientPhone}\n` +
-        `*Service:* ${formData.service}\n` +
-        `*Doctor:* ${formData.doctor}\n` +
         `*Preferred Date:* ${formData.appointmentDate}\n` +
         `*Time Slot:* ${formData.timeSlot}\n` +
         `*Condition/Concern:* ${formData.condition}\n` +
@@ -130,10 +92,7 @@ function Appointments() {
       setSubmitted(true);
       setFormData({
         patientName: '',
-        patientEmail: '',
         patientPhone: '',
-        service: '',
-        doctor: '',
         appointmentDate: '',
         timeSlot: '',
         condition: '',
@@ -183,20 +142,6 @@ function Appointments() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="patientEmail">Email Address *</label>
-                  <input
-                    type="email"
-                    id="patientEmail"
-                    name="patientEmail"
-                    value={formData.patientEmail}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                  />
-                </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
                   <label htmlFor="patientPhone">Phone Number *</label>
                   <input
                     type="tel"
@@ -207,6 +152,9 @@ function Appointments() {
                     placeholder="Enter your phone number"
                   />
                 </div>
+              </div>
+
+              <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="condition">Condition/Concern *</label>
                   <select
@@ -221,40 +169,6 @@ function Appointments() {
                     ))}
                   </select>
                 </div>
-              </div>
-
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="service">Service *</label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>{service}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="doctor">Doctor/Specialist *</label>
-                  <select
-                    id="doctor"
-                    name="doctor"
-                    value={formData.doctor}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select a doctor</option>
-                    {doctors.map((doctor) => (
-                      <option key={doctor} value={doctor}>{doctor}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="appointmentDate">Preferred Date *</label>
                   <input
@@ -265,6 +179,9 @@ function Appointments() {
                     onChange={handleChange}
                   />
                 </div>
+              </div>
+
+              <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="timeSlot">Time Slot *</label>
                   <select
