@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>About Apex Healthcare</h3>
+          <h3>About Apex Physiotherapy</h3>
           <p>Providing world-class healthcare services with a focus on patient care and recovery.</p>
           <div className="footer-social-links">
             <a href={CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" className="footer-social-icon whatsapp" title="Chat on WhatsApp">
@@ -43,7 +43,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Apex Healthcare. All rights reserved.</p>
+        <p>&copy; 2024 Apex Physiotherapy. All rights reserved.</p>
       </div>
     </footer>
   );

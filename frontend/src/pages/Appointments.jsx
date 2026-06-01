@@ -74,7 +74,7 @@ function Appointments() {
       console.log('Appointment booked: Email sent');
 
       // Construct WhatsApp message and redirect
-      const whatsappMessage = `*New Appointment Request - Apex Healthcare*\n` +
+      const whatsappMessage = `*New Appointment Request - Apex Physiotherapy*\n` +
         `---------------------------------------\n` +
         `*Patient Name:* ${formData.patientName}\n` +
         `*Phone:* ${formData.patientPhone}\n` +
@@ -217,7 +217,7 @@ function Appointments() {
 
             <div className="clinic-info">
               <h3>📍 Clinic Location</h3>
-              <p><strong>Apex Healthcare Multi-Specialty Center</strong></p>
+              <p><strong>Apex Physiotherapy</strong></p>
               <p>Bangalore, Karnataka, India</p>
               <p>📞 {CONFIG.phoneNumberFormatted} | 📧 {CONFIG.contactEmail}</p>
               <p><strong>Clinic Hours:</strong></p>

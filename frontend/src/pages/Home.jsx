@@ -7,7 +7,7 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to Apex Healthcare</h1>
+          <h1>Welcome to Apex Physiotherapy</h1>
           <p>Advanced, Evidence-Based Healthcare Services for Your Complete Recovery</p>
           <div className="hero-buttons">
             <Link to="/services" className="btn btn-primary">Explore Services</Link>
@@ -19,7 +19,7 @@ function Home() {
       {/* Features Section */}
       <section className="features">
         <div className="container">
-          <h2>Why Choose Apex Healthcare?</h2>
+          <h2>Why Choose Apex Physiotherapy?</h2>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">🔬</div>
@@ -39,7 +39,7 @@ function Home() {
             <div className="feature-card">
               <div className="feature-icon">🏆</div>
               <h3>Proven Results</h3>
-              <p>460+ patient testimonials with 4.9★ ratings</p>
+              <p>350+ patient testimonials with 4.9★ ratings</p>
             </div>
           </div>
         </div>

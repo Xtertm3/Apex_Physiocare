@@ -30,7 +30,7 @@ function Testimonials() {
     {
       _id: '2',
       patientName: 'Meera Iyer',
-      content: 'Dr. Kirtika Chakraborty is amazing! Her patience and expertise during my post-pregnancy rehabilitation helped me regain my core strength and return to my daily routine pain-free. Highly recommend Apex Healthcare!',
+      content: 'Dr. Kirtika Chakraborty is amazing! Her patience and expertise during my post-pregnancy rehabilitation helped me regain my core strength and return to my daily routine pain-free. Highly recommend Apex Physiotherapy!',
       rating: 5,
       service: 'Yoga & Wellness'
     },
@@ -140,7 +140,7 @@ function Testimonials() {
 
           <div className="testimonial-stats">
             <div className="stat">
-              <h3>460+</h3>
+              <h3>350+</h3>
               <p>Verified Reviews</p>
             </div>
             <div className="stat">

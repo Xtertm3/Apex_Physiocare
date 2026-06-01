@@ -64,7 +64,7 @@ function Contact() {
       });
       
       // Construct WhatsApp message and redirect
-      const whatsappMessage = `*New General Enquiry - Apex Healthcare*\n` +
+      const whatsappMessage = `*New General Enquiry - Apex Physiotherapy*\n` +
         `---------------------------------------\n` +
         `*Name:* ${contactForm.name}\n` +
         `*Email:* ${contactForm.email}\n` +
@@ -115,7 +115,7 @@ function Contact() {
       });
 
       // Construct WhatsApp message and redirect
-      const whatsappMessage = `*New Service Query - Apex Healthcare*\n` +
+      const whatsappMessage = `*New Service Query - Apex Physiotherapy*\n` +
         `---------------------------------------\n` +
         `*Name:* ${queryForm.name}\n` +
         `*Email:* ${queryForm.email}\n` +
@@ -158,7 +158,7 @@ function Contact() {
             <div className="contact-info">
               <div className="info-card">
                 <h3>📍 Location</h3>
-                <p>Apex Healthcare Multi-Specialty Center</p>
+                <p>Apex Physiotherapy</p>
                 <p>Bangalore, Karnataka, India</p>
               </div>
 

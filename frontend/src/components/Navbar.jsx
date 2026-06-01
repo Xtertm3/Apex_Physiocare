@@ -17,7 +17,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          🏥 Apex Healthcare
+          🏥 Apex Physiotherapy
         </Link>
         
         {/* Hamburger Icon */}
